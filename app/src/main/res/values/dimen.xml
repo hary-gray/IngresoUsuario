@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titulos">20sp</dimen>
+    <dimen name="valores">15sp</dimen>
+    <dimen name="left">10sp</dimen>
+    <dimen name="right">10sp</dimen>
+    <dimen name="top">20sp</dimen>
+</resources>

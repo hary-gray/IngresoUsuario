@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">IngresoUsuario</string>
+    <string name="nombreC">Full name:  </string>
+    <string name="fecha">Date of bird:  </string>
+    <string name="mail">Mail: </string>
+    <string name="cellPhone">Cellphone:  </string>
+    <string name="description">Description of the contact</string>
+    <string name="next">Next</string>
+    <string name="confirm">Confirmation of the data</string>
+    <string name="Edit">Edit data</string>
+    <string name="fullName">fullname</string>
+    <string name="dateOfBird">dateofbird</string>
+    <string name="cellNumber">cellnumber</string>
+    <string name="eMail">email</string>
+    <string name="comentary">comentary</string>
+</resources>

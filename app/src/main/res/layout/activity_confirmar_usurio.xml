@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmarUsurio"
+    android:paddingLeft="@dimen/left"
+    android:paddingRight="@dimen/right"
+    android:paddingTop="@dimen/top"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/confirm"
+        android:textSize="@dimen/titulos"
+        android:gravity="center"
+        >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/top"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tvConfirmName1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/nombreC"
+            android:textSize="@dimen/titulos"
+            android:gravity="left"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tvConfirmName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/nombreC"
+            android:textSize="@dimen/titulos"
+            android:gravity="left"
+            android:paddingLeft="@dimen/left"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/top"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tvConfirmDate1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/fecha"
+            android:textSize="@dimen/titulos"
+            android:gravity="left"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tvConfirmDate"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/fecha"
+            android:textSize="@dimen/titulos"
+            android:gravity="left"
+            android:paddingLeft="@dimen/left"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/top"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tvConfirmCell1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/cellPhone"
+            android:textSize="@dimen/titulos"
+            android:gravity="left"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tvConfirmCell"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/cellPhone"
+            android:textSize="@dimen/titulos"
+            android:gravity="left"
+            android:paddingLeft="@dimen/left"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/top"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tvConfirmMail1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/mail"
+            android:textSize="@dimen/titulos"
+            android:gravity="left"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tvConfirmMail"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/mail"
+            android:textSize="@dimen/titulos"
+            android:gravity="left"
+            android:paddingLeft="@dimen/left"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/top"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tvConfirmDescription"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/description"
+            android:textSize="@dimen/titulos"
+            android:gravity="left"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/top"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/btDataEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Edit"
+            android:layout_gravity="center"
+            android:onClick="editar"
+            >
+        </Button>
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
