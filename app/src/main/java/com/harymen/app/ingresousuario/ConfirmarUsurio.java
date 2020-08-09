@@ -13,6 +13,9 @@ public class ConfirmarUsurio extends AppCompatActivity {
    private TextView  tvConfirmCell;
    private TextView  tvConfirmMail;
    private TextView  tvConfirmDescription;
+   private int year;
+   private int month;
+   private int day;
     @Override
        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +32,9 @@ public class ConfirmarUsurio extends AppCompatActivity {
         String mail=parametros.getString(getResources().getString(R.string.eMail));
         String cel=parametros.getString(getResources().getString(R.string.cellNumber));
         String comment=parametros.getString(getResources().getString(R.string.comentary));
-
+        year =parametros.getInt(getResources().getString(R.string.year));
+        month =parametros.getInt(getResources().getString(R.string.month));
+        day =parametros.getInt(getResources().getString(R.string.day));
         tvConfirmName.setText(name);
         tvConfirmDate.setText(date);
         tvConfirmCell.setText(cel);
@@ -43,6 +48,9 @@ public class ConfirmarUsurio extends AppCompatActivity {
         intent.putExtra(getResources().getString(R.string.eMail),tvConfirmMail.getText().toString());
         intent.putExtra(getResources().getString(R.string.comentary),tvConfirmDescription.getText().toString());
         intent.putExtra(getResources().getString(R.string.dateOfBird),tvConfirmDate.getText().toString());
+        intent.putExtra(getResources().getString(R.string.year),year);
+        intent.putExtra(getResources().getString(R.string.month),month);
+        intent.putExtra(getResources().getString(R.string.day),day);
         startActivity(intent);
     }
 }

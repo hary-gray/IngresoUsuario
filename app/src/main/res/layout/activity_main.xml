@@ -17,20 +17,14 @@
         android:orientation="horizontal"
         android:paddingTop="@dimen/titulos"
         >
-        <TextView
-            android:id="@+id/tvNombre"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/nombreC"
-            android:textSize="@dimen/titulos"
-            android:paddingRight="@dimen/right"
-            />
+
         <EditText
             android:id="@+id/etNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/titulos"
             android:paddingLeft="@dimen/left"
+            android:hint="@string/nombreC"
             />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -42,10 +36,19 @@
         android:paddingTop="@dimen/top"
         >
         <TextView
-            android:id="@+id/tvFecha"
+            android:id="@+id/tvFecha1"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="@string/fecha"
+            android:textSize="@dimen/titulos"
+            android:paddingRight="@dimen/right"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text=""
             android:textSize="@dimen/titulos">
         </TextView>
 
@@ -61,22 +64,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tvCel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cellPhone"
-            android:paddingTop="@dimen/top"
-            android:textSize="@dimen/titulos"
-            android:paddingRight="@dimen/right"
-            >
-        </TextView>
         <EditText
             android:id="@+id/etCell"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/left"
             android:textSize="@dimen/titulos"
+            android:hint="@string/cellPhone"
             >
         </EditText>
     </LinearLayout>
@@ -84,33 +78,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tvMail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/mail"
-            android:paddingTop="@dimen/top"
-            android:textSize="@dimen/titulos"
-            android:paddingRight="@dimen/right"
-            >
-        </TextView>
         <EditText
             android:id="@+id/etMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/left"
             android:textSize="@dimen/titulos"
+            android:hint="@string/mail"
             >
         </EditText>
     </LinearLayout>
-    <EditText
-        android:id="@+id/etDescription"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/description"
-        android:textSize="@dimen/titulos"
+        android:orientation="horizontal"
         >
-    </EditText>
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/titulos"
+            android:hint="@string/description"
+            >
+        </EditText>
+    </LinearLayout>
+
     <Button
         android:id="@+id/btNext"
         android:layout_width="wrap_content"
@@ -118,6 +110,7 @@
         android:text="@string/next"
         android:layout_gravity="center"
         android:onClick="nextPage"
+        android:theme="@style/ButtonStyle"
         >
     </Button>
 </androidx.appcompat.widget.LinearLayoutCompat>

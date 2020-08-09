@@ -11,7 +11,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class MainActivity extends AppCompatActivity {
     private EditText etNombre;
@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     private EditText etMail;
     private EditText etDescription;
     private TextView tvFecha;
+    private DatePicker dpMyPicker;
+    private int year;
+    private int month;
+    private int day;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         etMail=(EditText) findViewById(R.id.etMail);
         etDescription=(EditText) findViewById(R.id.etDescription);
         tvFecha=(TextView) findViewById(R.id.tvFecha);
+        dpMyPicker=(DatePicker) findViewById(R.id.dpMyPicker);
+
+        year=dpMyPicker.getYear();
+        month=dpMyPicker.getMonth();
+        day=dpMyPicker.getDayOfMonth();
         Bundle parametros = getIntent().getExtras();
         try {
             String name     = parametros.getString(getResources().getString(R.string.fullName));
@@ -35,7 +44,12 @@ public class MainActivity extends AppCompatActivity {
             String mail     =parametros.getString(getResources().getString(R.string.eMail));
             String cel      =parametros.getString(getResources().getString(R.string.cellNumber));
             String comment  =parametros.getString(getResources().getString(R.string.comentary));
-            String dob = tvFecha.getText().toString()+ " "+ date;
+            String dob = date;
+
+            year =parametros.getInt(getResources().getString(R.string.year));
+            month =parametros.getInt(getResources().getString(R.string.month));
+            day =parametros.getInt(getResources().getString(R.string.day));
+
             etNombre.setText(name);
             etCell.setText(cel);
             etMail.setText(mail);
@@ -43,14 +57,21 @@ public class MainActivity extends AppCompatActivity {
             tvFecha.setText(dob);
         }catch (Exception e){}
 
+        dpMyPicker.init(year, month ,day, new DatePicker.OnDateChangedListener() {
+            @Override
+            public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
+                tvFecha.setText(i+ "/" + (i1 +1) + "/" + i2);
+            }
+        });
+        tvFecha.setText(year + "/" + (month +1) + "/" + day);
     }
     public void nextPage(View v) {
         EditText etNombre = (EditText) findViewById(R.id.etNombre);
         DatePicker dpMyPicker= (DatePicker) findViewById(R.id.dpMyPicker);
-        int year = dpMyPicker.getYear();
-        int month = dpMyPicker.getMonth() + 1;
-        int day = dpMyPicker.getDayOfMonth() ;
-        String  date = year + "/" + month + "/" + day;
+        year = dpMyPicker.getYear();
+        month = dpMyPicker.getMonth() ;
+        day = dpMyPicker.getDayOfMonth() ;
+        String  date = year + "/" + (month+1) + "/" + day;
         EditText etCell = (EditText) findViewById(R.id.etCell);
         EditText etMail= (EditText) findViewById(R.id.etMail);
         EditText etDescription= (EditText) findViewById(R.id.etDescription);
@@ -60,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(getResources().getString(R.string.eMail),etMail.getText().toString());
         intent.putExtra(getResources().getString(R.string.comentary),etDescription.getText().toString());
         intent.putExtra(getResources().getString(R.string.dateOfBird),date);
+        intent.putExtra(getResources().getString(R.string.year),year);
+        intent.putExtra(getResources().getString(R.string.month),month);
+        intent.putExtra(getResources().getString(R.string.day),day);
         startActivity(intent);
     }
+
 }
